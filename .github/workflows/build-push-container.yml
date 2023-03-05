@@ -39,7 +39,7 @@ jobs:
           tags: |
             ghcr.io/xavivars/staticserver:latest
           # build on feature branches, push only on main branch
-          push: ${{ github.ref == 'refs/heads/master' }}
+          push: ${{ github.ref == 'refs/heads/$default-branch' }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
