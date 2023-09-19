@@ -35,6 +35,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
+          platforms: linux/amd64,linux/arm64
           # Note: tags has to be all lower-case
           tags: |
             ghcr.io/xavivars/staticserver:latest
